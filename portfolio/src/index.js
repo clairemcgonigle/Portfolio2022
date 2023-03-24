@@ -1,7 +1,7 @@
 import React from "react";
-import Main from "./Main";
+import Main from "./client/Main";
 import {createTheme, ThemeProvider} from "@mui/material";
-import { createRoot } from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
 
 const theme = createTheme({
     palette: {
@@ -22,25 +22,28 @@ const theme = createTheme({
             fontSize: 150,
         },
         h2: {
-            fontFamily: 'Sanchez',
+            fontFamily: 'Abril Fatface',
+            fontSize: 90,
         },
         h3: {
-            fontFamily: 'Suravaram',
-        },
-        h4: {
             fontFamily: 'Abril Fatface',
             fontSize: 35,
             fontWeight: 'lighter'
         },
-        h5: {
+        h4: {
             fontFamily: 'Roboto',
             fontSize: 30,
+            paddingTop: '20px',
+        },
+        h5: {
+            fontFamily: 'Roboto',
+            fontSize: 22,
         },
         h6: {
             fontFamily: 'Roboto',
-            fontSize: 22,
-            // fontWeight: 'bold'
+            fontSize: 18,
         },
+        h7: {},
         overline: {
             fontWeight: 700,
         },
@@ -68,6 +71,11 @@ const theme = createTheme({
             styleOverrides: {
                 colorInherit: {
                     color: '#000'
+                },
+                root: {
+                    '&:hover': {
+                        backgroundColor: 'white',
+                    }
                 }
             },
             defaultProps: {
@@ -75,7 +83,43 @@ const theme = createTheme({
             }
         },
         MuiButton: {
+            styleOverrides: {
+                typography: {
+                    '&:hover': {
+                        fontWeight: 'bold',
+                        color: 'blue'
+                    }
+                },
+                root: {
+                    '&:hover': {
+                        backgroundColor: 'white',
+                    },
+                    "&:active": {
+                        // fontWeight: 'bold',
+                        backgroundColor: 'white',
+                    },
+                }
+            },
+
             variants: [
+                {
+                    props: {variant: "button1", color: 'primary'},
+                    style: {
+                        fontFamily: 'Roboto',
+                        fontSize: 22,
+                        padding: 0,
+                        '&:hover': {
+                            backgroundColor: 'white',
+                            fontWeight: 'bold',
+                        },
+                        "&:active": {
+                            fontWeight: 'bold',
+                            boxShadow: 'none',
+                            background: 'white',
+                            // color: 'white',
+                        },
+                    },
+                },
                 {
                     props: {variant: "contained", color: 'primary'},
                     style: {
