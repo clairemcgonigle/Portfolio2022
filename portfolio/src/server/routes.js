@@ -9,4 +9,9 @@ router.route("/recipe_book").get((req, res) =>  {
         .then(foundRecipes => res.json(foundRecipes));
 });
 
+
+router.route("/recipe_book/:name").get(function (req, res) {
+    Recipe.find({name: req.params.name}).then(found => res.json(found));
+});
+
 module.exports = router;

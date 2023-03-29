@@ -8,12 +8,17 @@ export default function SideProject() {
 
     const [recipes, setRecipes] = useState([{
         name: '',
-        recipe: ''
+        recipe: '',
+        recipeSpanish: '',
     }])
 
     const [currentRecipe, setRecipe] = useState([{
         name: '',
-        recipe: ''
+        recipe: '',
+        recipeSpanish: '',
+        ingredients: '',
+        ingredientsSpanish: '',
+        recipeInfo: '',
     }])
 
     useEffect(() => {
@@ -39,48 +44,13 @@ export default function SideProject() {
             <Grid item={true} xs={1}/>
 
             <Grid item={true} xs={5} direction={'column'} display="flex">
-            {/*    <Grid item={true} xs={12} display="flex">*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Spinach Artichoke Dip</Typography>*/}
-            {/*        </Grid>*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Garbanzas</Typography>*/}
-            {/*        </Grid>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid item={true} xs={12} display="flex">*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Papas Arrugadas</Typography>*/}
-            {/*        </Grid>*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Croquetas</Typography>*/}
-            {/*        </Grid>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid item={true} xs={12} display="flex">*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Thanksgiving Stuffing</Typography>*/}
-            {/*        </Grid>*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Tortilla</Typography>*/}
-            {/*        </Grid>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid item={true} xs={12} display="flex">*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Banana Bread</Typography>*/}
-            {/*        </Grid>*/}
-            {/*        <Grid item={true} xs={6} direction={'column'} display="flex">*/}
-            {/*            <Typography variant={'h6'}>Garlic Soup</Typography>*/}
-            {/*        </Grid>*/}
-            {/*    </Grid>*/}
-
                 <Grid item={true} xs={12} direction={'column'} display="flex">
                     {recipes.map(recipe =>
                         <Button variant='button1' disableRipple
-                                onClick={() => navigate(`/recipe_book/${recipe}`)}
-                            // style={{fontWeight: window.location.href.includes('aboutMe') ? "bold" : "regular"}}
+                                onClick={() => { setRecipe(recipe)
+                                    navigate(`/recipe_book/${recipe.name}`)}}
                         > {recipe.name}
                         </Button>
-                    //<Typography variant={'h6'} padding={2}>{recipe.name}</Typography>
-                    // <Typography variant={'h6'}>{recipe.recipe}</Typography>
                         )}
                 </Grid>
             </Grid>

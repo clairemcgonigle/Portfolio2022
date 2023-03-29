@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Route, BrowserRouter, Routes} from "react-router-dom";
+import { render } from "react-dom";
 
 import Home from "./Home";
 import AboutMe from "./aboutMe";
@@ -11,12 +12,13 @@ import RecipePage from "./recipePage";
 const defaultRecipe = {
     "name": "",
     "recipe": "",
+    "recipeSpanish": "",
 };
 
 const Main = () => {
-    let [state, setState] = useState(
-        Object.assign(defaultRecipe, window.__PRELOADED_STATE__)
-    );
+    // let [state, setState] = useState(
+    //     Object.assign(defaultRecipe, window.__PRELOADED_STATE__)
+    // );
 
     return (
         <BrowserRouter>
@@ -29,8 +31,9 @@ const Main = () => {
                         <Route path={"/fulbright"} element={<Fulbright/>}/>
                         <Route path={"/recipe_book"} element={<SideProject/>}/>
                         <Route
-                            path="/recipe_book/:recipe"
-                            render={(p) => <RecipePage {...p} currentRecipe={state.name} />}
+
+                            path={"/recipe_book/:recipe"} element={<RecipePage/>}
+                           // render={(p) => <RecipePage {...p} currentRecipe={state.name} />}
                         />
                     </Routes>
                 </div>
