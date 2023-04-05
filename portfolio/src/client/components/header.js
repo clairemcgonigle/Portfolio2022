@@ -28,7 +28,7 @@ const Header = () => {
 
                     <Grid item={true} xs={6} display={'flex'} alignItems={'center'}>
 
-                        <Grid item={true} xs={3} display="flex"
+                        <Grid item={true} xs={4} display="flex"
                               justifyContent="flex-end"
                               alignItems="flex-end">
                             <Button variant='button1' disableRipple
@@ -39,18 +39,18 @@ const Header = () => {
                             </Button>
                         </Grid>
 
-                        <Grid item={true} xs={3} display="flex"
-                              justifyContent="flex-end"
-                              alignItems="flex-end">
-                            <Button variant='button1' disableRipple
-                                onClick={() => navigate('/aboutMe')}
-                                    // style={{fontWeight: window.location.href.includes('aboutMe') ? "bold" : "regular"}}
-                            >
-                                    about me
-                            </Button>
-                        </Grid>
+                        {/*<Grid item={true} xs={3} display="flex"*/}
+                        {/*      justifyContent="flex-end"*/}
+                        {/*      alignItems="flex-end">*/}
+                        {/*    <Button variant='button1' disableRipple*/}
+                        {/*        onClick={() => navigate('/aboutMe')}*/}
+                        {/*            // style={{fontWeight: window.location.href.includes('aboutMe') ? "bold" : "regular"}}*/}
+                        {/*    >*/}
+                        {/*            about me*/}
+                        {/*    </Button>*/}
+                        {/*</Grid>*/}
 
-                        <Grid item={true} xs={3} display="flex"
+                        <Grid item={true} xs={4} display="flex"
                               justifyContent="flex-end"
                               alignItems="flex-end">
                             <Button variant='button1' disableRipple
@@ -60,7 +60,7 @@ const Header = () => {
                             </Button>
                         </Grid>
 
-                        <Grid item={true} xs={3} display="flex"
+                        <Grid item={true} xs={4} display="flex"
                               justifyContent="flex-end"
                               alignItems="flex-end">
                             <Button variant='button1' disableRipple

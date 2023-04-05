@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 export default function RecipePage() {
     var pathArray = window.location.pathname.split('/');
     var recipeName = pathArray[pathArray.length - 1].replaceAll("%20", " ");
+    var recipeImage = pathArray[pathArray.length - 1].replaceAll("%20", "");
 
     const [currentRecipe, setRecipe] = useState([{
         name: '',
@@ -39,11 +40,10 @@ export default function RecipePage() {
                 <Grid item={true} xs={5} direction={'column'} display="flex">
                     <Grid item={true} xs={12} direction={'column'} display="flex">
                         <img
-                            src={'/images/McGonigle-Picture.jpg'}
-                            alt={'sunset'}
+                            src={`/images/${recipeImage}Image1.jpg`}
+                            alt={'Recipe Image #1'}
                             style={{
                                 objectFit: "cover",
-                                // borderRadius: '50%',
                                 width: '98%',
                                 height: '98%',
                                 maxWidth: '400px',
@@ -73,7 +73,7 @@ export default function RecipePage() {
             </Grid>
             <Grid item={true} xs={5} direction={'column'} display="flex">
                 <Typography variant={'h4'} paddingBottom={2}>Ingredientes</Typography>
-                <Typography variant={'h6'}>{currentRecipe.recipe}</Typography>
+                <Typography variant={'h6'}>{currentRecipe.ingredientsSpanish}</Typography>
             </Grid>
             <Grid item={true} xs={2} direction={'column'} display="flex"/>
             <Grid item={true} xs={5} direction={'column'} display="flex">
@@ -87,39 +87,37 @@ export default function RecipePage() {
                     <Typography variant={'h3'} paddingBottom={5}>IMAGES OF THE RECIPE</Typography>
                 </Grid>
                 <Grid item={true} xs={12} display="flex">
+                    <Grid item={true} xs={4} display="flex">
                     <img
-                        src={'/images/McGonigle-Picture.jpg'}
-                        alt={'sunset'}
+                        src={`/images/${recipeImage}Image2.jpg`}
+                         //src={`https://claireportfolio2022.s3.amazonaws.com/${currentRecipe.name}/image2.png`}
+                        alt={'Recipe Image 1'}
                         style={{
                             objectFit: "cover",
-                            // borderRadius: '50%',
-                            width: '98%',
-                            height: '98%',
                             maxWidth: '400px',
                             maxHeight: '400px'
                         }}/>
+                    </Grid>
+                    <Grid item={true} xs={4} display="flex">
                     <img
-                        src={'/images/McGonigle-Picture.jpg'}
+                        src={`/images/${recipeImage}Image3.jpg`}
                         alt={'sunset'}
                         style={{
                             objectFit: "cover",
-                            // borderRadius: '50%',
-                            width: '98%',
-                            height: '98%',
                             maxWidth: '400px',
                             maxHeight: '400px'
                         }}/>
+                    </Grid>
+                    <Grid item={true} xs={4} display="flex">
                     <img
-                        src={'/images/McGonigle-Picture.jpg'}
+                        src={`/images/${recipeImage}Image1.jpg`}
                         alt={'sunset'}
                         style={{
                             objectFit: "cover",
-                            // borderRadius: '50%',
-                            width: '98%',
-                            height: '98%',
                             maxWidth: '400px',
                             maxHeight: '400px'
                         }}/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

@@ -4,11 +4,11 @@ import Grid from "@mui/material/Grid";
 
 export default function Fulbright() {
     return (
-        <Grid container paddingLeft={10} paddingRight={10} paddingTop={'120px'} height={'100vh'} width={'100%'}>
+        <Grid container paddingLeft={10} paddingRight={10} paddingTop={'80px'} height={'100vh'} width={'100%'}>
 
             <Grid item={true} xs={12} justifyContent="center" alignItems="center" display={"flex"}>
-                <Grid item={true} xs={6}  display="flex">
-                    <Grid item={true} xs={12}  display="flex">
+                <Grid item={true} xs={6} display="flex">
+                    <Grid item={true} xs={12} direction={'column'}  display="flex">
                         <Typography variant={'h2'}>My Time in Spain</Typography>
                         <Typography variant={'h4'}>A blog of my year in the Canary Islands, Spain, as a Fulbright
                             English Teaching Assistant.</Typography>
