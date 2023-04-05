@@ -44,10 +44,6 @@ export default function RecipePage() {
                             alt={'Recipe Image #1'}
                             style={{
                                 objectFit: "cover",
-                                width: '98%',
-                                height: '98%',
-                                maxWidth: '400px',
-                                maxHeight: '400px'
                             }}/>
                     </Grid>
                 </Grid>
@@ -83,15 +79,15 @@ export default function RecipePage() {
 
 
             <Grid item={true} xs={12} paddingTop={15} paddingBottom={'150px'} direction={"column"} display="flex">
-                <Grid item={true} xs={12} display="flex">
-                    <Typography variant={'h3'} paddingBottom={5}>IMAGES OF THE RECIPE</Typography>
+                <Grid item={true} paddingBottom={5} xs={12} direction={"column"} display="flex">
+                    <Typography paddingBottom={1} variant={'h3'}>Images of the Recipe</Typography>
+                    <Divider/>
                 </Grid>
                 <Grid item={true} xs={12} display="flex">
                     <Grid item={true} xs={4} display="flex">
                     <img
                         src={`/images/${recipeImage}Image2.jpg`}
-                         //src={`https://claireportfolio2022.s3.amazonaws.com/${currentRecipe.name}/image2.png`}
-                        alt={'Recipe Image 1'}
+                        alt={'Recipe Image #2'}
                         style={{
                             objectFit: "cover",
                             maxWidth: '400px',
@@ -101,7 +97,7 @@ export default function RecipePage() {
                     <Grid item={true} xs={4} display="flex">
                     <img
                         src={`/images/${recipeImage}Image3.jpg`}
-                        alt={'sunset'}
+                        alt={'Recipe Image #3'}
                         style={{
                             objectFit: "cover",
                             maxWidth: '400px',
@@ -111,7 +107,7 @@ export default function RecipePage() {
                     <Grid item={true} xs={4} display="flex">
                     <img
                         src={`/images/${recipeImage}Image1.jpg`}
-                        alt={'sunset'}
+                        alt={'Recipe Image #1'}
                         style={{
                             objectFit: "cover",
                             maxWidth: '400px',
