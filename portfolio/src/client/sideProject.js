@@ -33,11 +33,11 @@ export default function SideProject() {
         <Grid container paddingLeft={10} paddingRight={10} paddingTop={'120px'} height={'100vh'} width={'100%'}>
             <Grid item={true} xs={6} direction={'column'} display="flex">
                 <Grid item={true} xs={12} direction={'column'} display="flex">
-                    <Typography variant={'h2'}>My Recipe Book</Typography>
-                    <Typography variant={'h4'}>Welcome to my side project! While in Spain, I have been putting together
-                        a collection of recipes. These are a mix of Canarian recipes shared with me by people I've
-                        met here, and my own recipes from home that I have been sharing. Check out my collection
-                        of recipes to the right, and scroll to view all:</Typography>
+                    <Typography paddingBottom={2} variant={'h2'}>My Recipe Book</Typography>
+                    <Typography variant={'h4'}>Welcome to my Fulbright side project! While in Spain, I have been putting
+                        together a collection of recipes. These are a mix of Spanish recipes (many of them Canarian,
+                        more specifically) shared with me by people I've met here, and my own recipes from home that I
+                        have been sharing. Check out my collection of recipes to the right, and scroll to view all:</Typography>
                 </Grid>.
             </Grid>
 
