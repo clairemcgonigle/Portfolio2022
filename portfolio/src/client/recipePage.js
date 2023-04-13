@@ -40,7 +40,7 @@ export default function RecipePage() {
                 <Grid item={true} xs={5} direction={'column'} display="flex">
                     <Grid item={true} xs={12} direction={'column'} display="flex">
                         <img
-                            src={`/images/${recipeImage}Image1.jpg`}
+                            src={`https://claireportfolio2022.s3.amazonaws.com/recipes/${recipeImage}1.jpg`}
                             alt={'Recipe Image #1'}
                             style={{
                                 objectFit: "cover",
@@ -86,7 +86,8 @@ export default function RecipePage() {
                 <Grid item={true} xs={12} display="flex">
                     <Grid item={true} xs={4} display="flex">
                     <img
-                        src={`/images/${recipeImage}Image2.jpg`}
+                        src={`https://claireportfolio2022.s3.amazonaws.com/recipes/${recipeImage}2.jpg`}
+                        // src={`/images/${recipeImage}Image2.jpg`}
                         alt={'Recipe Image #2'}
                         style={{
                             objectFit: "cover",
@@ -96,7 +97,7 @@ export default function RecipePage() {
                     </Grid>
                     <Grid item={true} xs={4} display="flex">
                     <img
-                        src={`/images/${recipeImage}Image3.jpg`}
+                        src={`https://claireportfolio2022.s3.amazonaws.com/recipes/${recipeImage}3.jpg`}
                         alt={'Recipe Image #3'}
                         style={{
                             objectFit: "cover",
@@ -106,7 +107,7 @@ export default function RecipePage() {
                     </Grid>
                     <Grid item={true} xs={4} display="flex">
                     <img
-                        src={`/images/${recipeImage}Image1.jpg`}
+                        src={`https://claireportfolio2022.s3.amazonaws.com/recipes/${recipeImage}1.jpg`}
                         alt={'Recipe Image #1'}
                         style={{
                             objectFit: "cover",
